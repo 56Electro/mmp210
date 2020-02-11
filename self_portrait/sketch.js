@@ -1,25 +1,39 @@
 /*
-	Self Portrait
+	Self Portrait with Variables
 	by Asghar
-	2.6.2020
+	2.11.2020
 	-
 */
 
+// global scope
+
+// position variables
+var x = 200, // origin for face
+var y = 180; 
+
+// size variables
+var s = 200; // size of the face
+
 function setup() {
+	// setup scope
 	createCanvas(640, 360);
 }
 
 function draw () {
+	// draw scope
 	background('black');
 
 	// shapes with xy coordinates + size
 
-	fill('green');
+	fill('purple');
 	stroke('white');
 	strokeWeight(5);
 	
 	// face area
 	ellipse(200, 180, 200); // face
+
+	// x++;
+	// s++;
 
 	fill(0, 81, 82, 127);
 	noStroke(0, 81, 82);
@@ -49,19 +63,19 @@ function draw () {
 	// shapes that are only xy points
 
 	// hair
-	line(150, 70, 160, 100);
-	line(160, 70, 170, 100);
-	line(170, 70, 180, 100);
-	line(180, 70, 190, 100);
-	line(190, 70, 200, 100);
-	line(200, 70, 210, 100);
-	line(210, 70, 220, 100);
-	line(220, 70, 230, 100);
-	line(230, 70, 240, 100);
+	line(x - 50, y - 110, x - 40, y - 80);
+	line(x - 40, y - 110, x - 30, y - 80);
+	line(x - 30, y - 110, x - 20, y - 80);
+	line(x - 20, y - 110, x - 10, y - 80);
+	line(x - 10, y - 110, x, y - 80);
+	line(x, y - 110, x + 10, y - 80);
+	line(x + 10, y - 110, x + 20, y - 80);
+	line(x + 20, y - 110, x + 30, y - 80);
+	line(x + 30, y - 110, x + 40, y - 80);
 
 	// nose
 	fill('DARKPURPLE');
 	noStroke();
-	triangle(190, 180, 180, 200, 220, 190);
+	triangle(x - 10, y, y, x, x + 20, y + 10);
 
 }
