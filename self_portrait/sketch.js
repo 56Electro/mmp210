@@ -8,7 +8,7 @@
 // global scope
 
 // position variables
-var x = 200, // origin for face
+var x; // 200, // origin for face
 var y = 180; 
 
 // size variables
@@ -30,7 +30,11 @@ function draw () {
 	strokeWeight(5);
 	
 	// face area
+
+	// x = mouseX
+	// y = mouseY
 	ellipse(200, 180, 200); // face
+
 
 	// x++;
 	// s++;
@@ -42,10 +46,12 @@ function draw () {
 
 	// mouth
 	rectMode(CENTER);
-	stroke('blue');
-	strokeWeight(5);
+	stroke('darkblue');
+	strokeWeight(40);
 	noFill();
-	rect(200, 220, 100, 20, 10);
+
+	var mouthHeight = map(mouseX, 0, width, 10, 150);
+	rect(200, 220, 120, 20, 10);
 
 	// right ear
 	stroke('white');
@@ -54,8 +60,8 @@ function draw () {
 	arc(290, 180, 40, 60, -HALF_PI, HALF_PI);
 
 	// left ear
-	stroke('white')
-	fill('red')
+	stroke('white');
+	fill('red');
 	arc(110, 180, 50, 70, HALF_PI, -HALF_PI);
 	arc(110, 180, 40, 60, HALF_PI, -HALF_PI);
 

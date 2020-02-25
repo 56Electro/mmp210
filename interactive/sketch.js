@@ -2,7 +2,7 @@
 	Interactive Self Portrait
 	by Shaikh "Asghar"
 	2.18.2020
-	class example
+	-
 */
 
 //  global scope
@@ -48,7 +48,7 @@ function draw() {
 	// mouth
 	rectMode(CENTER);
 	stroke('#5DADE2');	
-	strokeWeight(2);
+	strokeWeight(5);
 	noFill();
 	rect(x, y + 40, 100, 20, 10);
 
@@ -80,7 +80,7 @@ function draw() {
 	line(x + 50, y - 110, x + 50, y - 80);
 
 	// nose
-	fill('DARKPURPLE');
+	fill('darkblue');
 	noStroke();
 	triangle(x - 10, y, x - 20, y + 20, x + 20, y + 10);
 
