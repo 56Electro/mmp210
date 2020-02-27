@@ -1,7 +1,14 @@
 /*
-	meme version 1 example
-	2.25.2020
+	Meme Version 1.0
+	2.27.2020
 */
+
+// global scope
+var pizzaImage;
+
+function preload() {
+	pizzaImage = loadImage("pizza.jpg");
+}
 
 function setup() {
 	var canvas = createCanvas(500, 500);
@@ -11,17 +18,20 @@ function setup() {
 function draw() {
 	background('black');
 
+	// draw the image
+	image(pizzaImage, 0, 0, 500, 500);
+
 	textSize(100);
 	fill('blue');
 	stroke('orange');
 	strokeWeight(20);
 	textStyle(ITALIC);
 	textFont('Segoe UI');
-	textAlign(RIGHT, CENTER);
+	textAlign(CENTER, TOP);
 
 	var hello = 'Yo yo!';
 	var n = map(frameCount, 0, 200, 0, hello.length);
-	text(hello, 0, 250);
+	text(hello.charAt(n), 0, 250);
 
 	textSize(30);
 	strokeWeight(5);
