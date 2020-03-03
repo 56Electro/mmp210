@@ -1,5 +1,5 @@
 /*
-	Meme Version 1.0
+	Meme Version 2.0
 	3.3.2020
 */
 
@@ -21,13 +21,25 @@ function draw() {
 	// draw the image
 	image(pizzaImage, 0, 0, 500, 500);
 
-	textSize(45);
-	strokeWeight(5);
-	textStyle(NORMAL);
-	textFont('Comic Sans MS');
+	textSize(100);
+	fill('blue');
+	stroke('orange');
+	strokeWeight(20);
+	textStyle(ITALIC);
+	textFont('Segoe UI');
 	textAlign(CENTER, TOP);
 
-	var welcome = 'In pizza we crust! :P';
+	var hello = 'Yo yo!';
+	var n = map(frameCount, 0, 200, 0, hello.length);
+	text(hello.charAt(n), 0, 250);
+
+	textSize(30);
+	strokeWeight(5);
+	textStyle(NORMAL);
+	textFont('Segoe UI');
+	textAlign(CENTER, TOP);
+
+	var welcome = 'Welcome to my Website, Hello! :)';
 	var end = map(mouseY, 0, 200, 0, welcome.length);
 	text(welcome.substring(0, end), 250, 350);
 }
