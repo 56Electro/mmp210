@@ -1,6 +1,6 @@
 /*
-	Meme Version 2.0
-	3.3.2020
+	Meme Version 2.0 (localhost:8080)
+	3.5.2020
 */
 
 // global scope
@@ -10,7 +10,7 @@ function preload() {
 	pizzaImage = loadImage("pizza.jpg");
 }
 
-function setup() {
+f unction setup() {
 	var canvas = createCanvas(500, 500);
 	canvas.drawingContext.miterLimit = 2;
 }
@@ -26,7 +26,7 @@ function draw() {
 	stroke('orange');
 	strokeWeight(20);
 	textStyle(ITALIC);
-	textFont('Segoe UI');
+	textFont('Press Start 2P');
 	textAlign(CENTER, TOP);
 
 	var hello = 'Yo yo!';
@@ -36,7 +36,7 @@ function draw() {
 	textSize(30);
 	strokeWeight(5);
 	textStyle(NORMAL);
-	textFont('Segoe UI');
+	textFont('Press Start 2P');
 	textAlign(CENTER, TOP);
 
 	var welcome = 'Welcome to my Website, Hello! :)';

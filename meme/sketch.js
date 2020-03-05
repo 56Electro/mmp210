@@ -1,6 +1,6 @@
 /*
-	Meme Version 1.0
-	3.3.2020
+	Meme Version 1.0 (localhost:8080)
+	3.5.2020
 */
 
 // global scope
