@@ -8,6 +8,9 @@ var arrowImage;
 var pizzaImage;
 var pastaImage;
 
+var arrowSize;
+var arrowSizeSpeed = 10;
+
 var counter = 0;
 var instructions = "Click to begin!";
 var x;
@@ -25,6 +28,12 @@ function setup() {
 
 	x = width - 150;
 	y = height - 100;
+
+	arrowSize = width;
+	pizzaSize = width;
+	pastaSize = width;
+
+
 }
 
 function mousePressed() {
@@ -51,7 +60,16 @@ function draw() {
 
 	// draw the image
 	if (counter == 0) {
-		image(arrowImage, 0, 0, width, height);
+
+		imageMode (CENTER);
+		image(arrowImage, width/2, height/2, arrowSize, arrowSize);
+
+		arrowSize += arrowSizeSpeed;
+		if (arrowSize > width * 2 || arrowSize < width - arrowSizeSpeed) {
+				arrowSizeSpeed *= -1;
+		}
+
+
 	} else if (counter == 1) {
 		image(pizzaImage, 0, 0, width, height);
 	} else {
