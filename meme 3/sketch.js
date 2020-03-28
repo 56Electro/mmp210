@@ -30,8 +30,7 @@ function setup() {
 	y = height - 100;
 
 	arrowSize = width;
-	pizzaSize = width;
-	pastaSize = width;
+	
 
 
 }
