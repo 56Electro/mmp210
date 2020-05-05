@@ -11,25 +11,27 @@ for (let i = 100; i >= 1; i--) {
 
 function setup() {
 	createCanvas(640, 360);
-	noStroke();
 }
 
 function draw() {
-	background('lightblue');
+	background('darkblue');
+	strokeWeight(100);
+	stroke(255);
 
-	for (let x = 0; x <= width; x += 100) {
+	ellipse(0, 200, 25, 25);
+	ellipse(50, 200, 25, 25);
+	ellipse(100, 200, 25, 25);
+	ellipse(150, 200, 25, 25);
+	ellipse(200, 200, 25, 25);
+	ellipse(250, 200, 25, 25);
+	ellipse(300, 200, 25, 25);
+	ellipse(350, 200, 25, 25);
+	ellipse(400, 200, 25, 25);
+	ellipse(450, 200, 25, 25);
+	ellipse(500, 200, 25, 25);
+	ellipse(550, 200, 25, 25);
+	ellipse(600, 200, 25, 25);
+	ellipse(650, 200, 25, 25);
 
-		let y = 100 + x / 10;
-		let s = x/4;
-
-		fill('plum');
-		ellipse(x, y, s); // face
-
-		fill('gold');
-		ellipse(x + 20, y - 10, s/4); // right eye
-		ellipse(x - 20, y - 10, s/2); // left eye
-
-		rect(x - 10, y + 20, s/2, s/8, s/16);
-	}
 
 }
