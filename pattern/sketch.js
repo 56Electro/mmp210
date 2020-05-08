@@ -1,6 +1,6 @@
 /*
 	Pattern
-	5/6/2020
+	5/8/2020
 */
 
 var bgSlider;
@@ -28,7 +28,7 @@ function setup() {
 }
 
 function saveImage() {
-	save("pattern.png");
+	save("pattern.jpg");
 }
 
 
@@ -44,11 +44,11 @@ function pattern() {
 			translate(x, y);
 
 			var r = redSlider.value(); // red
-			var g = random(100, 255);
+			var g = random(200, 255);
 			var b = random(50, 150);
 
 			stroke(r, g, b);
-			strokeWeight(2);
+			strokeWeight(5);
 
 			var randomChoice = random(4);
 			if (randomChoice < 1) {
