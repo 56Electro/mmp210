@@ -1,5 +1,5 @@
 body {
-	background: rgb(24,96,69);
+	background: rgb(0,13,36);
 	background: linear-gradient(65deg, rgba(0,13,36, 1) 0%, rgba(106,9,121,1) 12%, rgba(0,255,7,1) 100%);
 
 	color: white;
@@ -7,7 +7,7 @@ body {
 	font-size: 20px;
 }
 
-h1, p, a {
+h1, a {
 	font-size: 1.5em;
 }
 
@@ -26,10 +26,31 @@ img {
 }
 
 #container {
-	max-width: 600px;
+	max-width: 640px;
 	margin: 0 auto;
+}
+
+#sketch {
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
 }
 
 .link {
 	list-style: none;
+}
+
+button, input {
+	display: block;
+	background: white;
+	border: 2px solid lightblue;
+	border-radius: 3px;
+	font-size: 20px;
+	margin: 5px 0;
+	color: lightblue;
+}
+
+p {
+	margin: 0;
+	color: lightblue;
 }

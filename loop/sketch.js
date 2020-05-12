@@ -1,24 +1,17 @@
 function setup() {
-	createCanvas(640, 360);
+	createCanvas(640, 400);
 }
 
 function draw() {
 	background('darkblue');
-	
-
-   
+	strokeWeight(4);
+	stroke(255);
   
-    for (var x = 0; x < width; x += 120) {
-      
-      strokeWeight(100);
-	  stroke('#00FFFF');
-      fill(0);
-      ellipse(x, 200, 25, 25);
-      
-      textSize(20);
-      fill('');
-      noStroke();
-      text(x, x, 200);
+    for (var x = 0; x <= width; x += 50) {
+      for (var y = 0; y <= height;  y += 50) {
+          fill(random(255), 0, random(255));
+    	  ellipse (x, y, 25, 25);
+    	}
     }
 
   
