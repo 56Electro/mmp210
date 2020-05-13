@@ -15,7 +15,7 @@ function draw() {
       textSize(20);
       fill('white');
       noStroke();
-      text(x, x, S);
+      text("S", x, y);
     	}
     }
 
