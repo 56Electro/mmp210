@@ -1,5 +1,5 @@
 /*
-	Pattern
+	Generated Pattern
 	5/8/2020
 */
 
@@ -19,7 +19,7 @@ function draw() {
 }
 
 function submit() {
-  //Check if the user has enter a name
+  //Check if the user has entered a name
   if(input.value() != "") {
     updateTitle();
     drawShapes();
@@ -33,22 +33,22 @@ function drawShapes() {
     for (j = 0; j < 6; j++) {
       fillRandomColor();
       
-      if (shapeSel.value() == "Circle ◯") {
-        ellipse(i*80+7.5, j*80+7.5, 65, 65);
+      if (shapeSel.value() == "Square □") {
+        rect(i*80+7.5, j*80+7.5, 65, 65);
       }
       
-      else if (shapeSel.value() == "Triangle △") {
-        triangle(i*80+40, j*80+10, i*80+10, j*80+70, i*80+70, j*80+70)
+      else if (shapeSel.value() == "Arc ⌒") {
+        arc(i*80+40, j*80+10, i*80+10, j*80+70, PI, TWO_PI);
       }
       
       //If both shapes are loved, a checkerboard will be drawn
       else {
         if ((i/2 == int(i/2) && j/2 != int(j/2)) || (i/2 != int(i/2) && j/2 == int(j/2))) {
-          ellipse(i*80+7.5, j*80+7.5, 65, 65);
+          rect(i*80+7.5, j*80+7.5, 65, 65);
         }
       
         else {
-          triangle(i*80+40, j*80+10, i*80+10, j*80+70, i*80+70, j*80+70);
+          arc(i*80+40, j*80+10, i*80+10, j*80+70, PI, TWO_PI);
         }
       }   
     }
@@ -61,7 +61,7 @@ function fillRandomColor() {
 }
 
 function updateTitle() {
-  if (shapeSel.value() == "Circle" || shapeSel.value()  == "Triangle") {
+  if (shapeSel.value() == "Square □" || shapeSel.value()  == "Arc ⌒") {
     title.html(input.value() + " Loves " + shapeSel.value());
   }
   
@@ -74,13 +74,13 @@ function updateTitle() {
 }
 
 function pageElements() {
-  createP("Enter your name: ");
+  createP("Please enter your name here: ");
   input = createInput("");
   createP("<br>Select your favorite shape: ");
   shapeSel = createSelect();
-  shapeSel.option("Circle ○");
-  shapeSel.option("Triangle △");
-  shapeSel.option("I like both");
+  shapeSel.option("Square □");
+  shapeSel.option("Arc ⌒");
+  shapeSel.option("I love both");
   createP("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
   submButton = createButton("Submit");
   submButton.mousePressed(submit);
