@@ -1,9 +1,11 @@
 /*
 	Generated Pattern
 	5/8/2020
+
+  source code from: https://editor.p5js.org/leoyouyang/sketches/Jy7qHizBi
 */
 
-let myColors = [[80, 80, 80], [248, 85, 86], [248, 143, 75], [253, 241, 133], [141, 214, 221]];
+let myColors = [[255, 255, 0], [204, 51, 0], [153, 0, 204], [0, 0, 255], [0, 255, 255], [121, 77, 255], [204, 51, 0], [255, 0, 255], [153, 102, 51], [255, 0, 0]];
 let i, j, colorFill;
 let title, shapeSel, shuffleButton, input, submButton;
 
@@ -27,7 +29,7 @@ function submit() {
 }
 
 function drawShapes() {
-  background(245, 245, 245);
+  background("black");
   
   for (i = 0; i < 6; i++) {
     for (j = 0; j < 6; j++) {
@@ -41,7 +43,7 @@ function drawShapes() {
         arc(i*80+40, j*80+10, i*80+10, j*80+70, PI, TWO_PI);
       }
       
-      //If both shapes are loved, a checkerboard will be drawn
+      //If the option "Both" is chosen, a sort checkerboard will be drawn out for you to see
       else {
         if ((i/2 == int(i/2) && j/2 != int(j/2)) || (i/2 != int(i/2) && j/2 == int(j/2))) {
           rect(i*80+7.5, j*80+7.5, 65, 65);
@@ -76,7 +78,7 @@ function updateTitle() {
 function pageElements() {
   createP("Please enter your name here: ");
   input = createInput("");
-  createP("<br>Select your favorite shape: ");
+  createP("<br>Now select your favorite shape: ");
   shapeSel = createSelect();
   shapeSel.option("Square □");
   shapeSel.option("Arc ⌒");
