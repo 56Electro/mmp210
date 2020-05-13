@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-	background('darkblue');
+	background('purple');
 	strokeWeight(4);
 	stroke(255);
   
@@ -15,6 +15,7 @@ function draw() {
       textSize(20);
       fill('white');
       noStroke();
+      textAlign (CENTER, CENTER)
       text("s", x, y);
     	}
     }
