@@ -1,5 +1,5 @@
 /*
-	final project pitch (template)
+	Final Project Pitch
 	5.4.2020
 */
 
@@ -17,6 +17,16 @@ var prevButtonX = 10;
 var prevButtonY = nextButtonY;
 var prevButtonW = nextButtonW + 30;
 var prevButtonH = nextButtonH;
+
+// global scope
+var arrowImage;
+var pizzaImage;
+var pastaImage;
+
+function preload() {
+	arrowImage = loadImage("arrow.png");
+	pizzaImage = loadImage("pizza.jpg");
+	pastaImage = loadImage("pasta.jpg");
 
 function setup() {
 	createCanvas(960, 720);
@@ -43,6 +53,10 @@ function draw() {
 	else if (currentSlide == 2) {
 		title = "Graphics";
 		description = "The types of graphics that will be used, are just text, images and p5 colors.";
+
+		img(arrowImage, 40, 40, 100, 100);
+		img(pizzaImage, x, y, width, height);
+		img(pastaImage, x, y, width, height);
 	}
 
 	// display title
