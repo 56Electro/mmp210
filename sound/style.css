@@ -1,0 +1,55 @@
+body {
+	background: rgb(0,0,153);
+
+	color: white;
+	font-family: Segoe UI;
+	font-size: 20px;
+}
+
+h1, a {
+	font-size: 1.5em;
+}
+
+a {
+	color: lightblue;
+	transition: color 300ms ease-in;
+}
+
+a:hover {
+	color: #6a0979;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+#container {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+#sketch {
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.link {
+	list-style: none;
+}
+
+button, input {
+	display: block;
+	background: white;
+	border: 2px solid lightblue;
+	border-radius: 3px;
+	font-size: 20px;
+	margin: 5px 0;
+	color: lightblue;
+}
+
+p {
+	margin: 0;
+	color: lightblue;
+}
