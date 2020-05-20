@@ -1,6 +1,6 @@
 /*
 	Final Project Pitch
-	5.4.2020
+	5.15.2020
 */
 
 var currentSlide = 0;
@@ -28,6 +28,8 @@ function preload() {
 	pizzaImage = loadImage("pizza.jpg");
 	pastaImage = loadImage("pasta.jpg");
 
+}
+
 function setup() {
 	createCanvas(960, 720);
 }
@@ -54,9 +56,9 @@ function draw() {
 		title = "Graphics";
 		description = "The types of graphics that will be used, are just text, images and p5 colors.";
 
-		img(arrowImage, 40, 40, 100, 100);
-		img(pizzaImage, x, y, width, height);
-		img(pastaImage, x, y, width, height);
+		image(pizzaImage, 10, 370, 300, 300);
+		image(arrowImage, 330, 370, 300, 300);
+		image(pastaImage, 650, 370, 300, 300);
 	}
 
 	// display title
@@ -72,7 +74,7 @@ function draw() {
 
 	// slide button display
 	// button background design
-	fill('#1e1e2f');
+	fill('#101010');
 	stroke(255);
 	strokeWeight(2);
 	
