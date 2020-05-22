@@ -31,6 +31,13 @@ function setup() {
 	y = height - 100;
 }
 
+function textSound() {
+
+	bitSound.play();
+}
+
+textSound();
+
 function mousePressed() {
 
 	if (!music.isPlaying()) {
@@ -42,16 +49,16 @@ function mousePressed() {
 	}
 
 	if (mouseX > width/2 && mouseY > height/2) {
-	bitSound.play();
+		textSound();
 		// bottom right
 		instructions = 'Behold, a pizza! Now click meh again';
 		y = 20;
 	} else if (mouseX > width/2 && mouseY < height/2) {
-		bitSound.play();
+		textSound();
 		instructions = 'BOOM! NOW SOME PASTA YO!! BETTER CLICK AGAIN';
 		x = 50;
 	} else if (mouseX < width/2 && mouseY < height/2) {
-		bitSound.play();
+		textSound();
 		instructions = 'Now imma chill here :P';
 		y = height - 100;
 	}
