@@ -1,6 +1,8 @@
 /*
+
 	DOM Elements
 	5.22.2020
+
 */
 
 var bgcolor;
